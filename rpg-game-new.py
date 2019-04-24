@@ -1,8 +1,12 @@
-class Hero():
-    def __init__(self, health, pohwer):
-    self.health = health
-    self.power = power
-    self.name = "Hero"
+class Character():
+    def __init__(self, name, health, power):
+        self.health = health
+        self.power = power
+        self.name = name
+
+class Hero(Character):
+    def __init__(self):
+        pass
 
     def attack(enemy):
         enemy.health -= self.power
@@ -17,13 +21,11 @@ class Hero():
             return False
 
     def print_status(self):
-        print(f"Current health of the {self.name} = {self.health})
+        print(f"Current health of the {self.name} = {self.health}")
 
-class Goblin():
-    def __init__(self, health, pohwer):
-    self.health = health
-    self.power = power
-    self.name = "Goblin"
+class Goblin(Character):
+    def __init__(self):
+        pass
 
     def attack(enemy):
         enemy.health -= self.power
