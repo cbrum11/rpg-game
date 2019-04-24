@@ -17,6 +17,12 @@ class Goblin():
     self.power = power
     self.name = "Goblin"
 
+    def attack(enemy):
+        enemy.health -= self.power
+        print("You do {} damage to the goblin.".format(self.power))
+        if enemy.health <= 0:
+            print(f"The {enemy.name} is dead.")
+
 goblin = Goblin(6,2)
 hero = Hero(10,5)
 
@@ -31,7 +37,7 @@ while goblin.health > 0 and hero.health > 0:
     print("> ", end=' ')
     raw_input = input()
     if raw_input == "1":
-            hero.attack(goblin)            
+        hero.attack(goblin)            
     elif raw_input == "2":
         pass
     elif raw_input == "3":
@@ -39,3 +45,6 @@ while goblin.health > 0 and hero.health > 0:
         break
     else:
         print("Invalid input {}".format(raw_input))
+
+    if goblin_health > 0:
+        goblin.attack(hero)
