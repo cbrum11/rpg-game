@@ -16,6 +16,9 @@ class Hero():
         else:
             return False
 
+    def print_status(self):
+        print(f"Current health of the {self.name} = {self.health})
+
 class Goblin():
     def __init__(self, health, pohwer):
     self.health = health
@@ -33,6 +36,9 @@ class Goblin():
             return True
         else:
             return False
+
+    def print_status(self):
+        print(f"Current health of the {self.name} = {self.health})
 
 goblin = Goblin(6,2)
 hero = Hero(10,5)
